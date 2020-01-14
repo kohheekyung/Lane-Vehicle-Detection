@@ -31,12 +31,6 @@ def get_fitline(img, f_lines):  # 대표선 구하기
     except:
         return None
 
-
-
-
-
-
-
 def draw_fit_line(img, lines, color=[255, 0, 0], thickness=10):  # 대표선 그리기
     cv2.line(img, (lines[0], lines[1]), (lines[2], lines[3]), color, thickness)
 
@@ -70,8 +64,7 @@ def line_intersection(line1, line2):
     return [x, y]
 
 def offset(left, mid, right):
-    # off_centre_pixels = ((self.img_width / 2) - (left_fitx[-1] + right_fitx[-1]) / 2)
-    # off_centre_m = off_centre_pixels * self.x_m_per_pix + self.lane_offset_bias
+
     LANEWIDTH = 3.7
     a = mid - left
     b = right - mid
@@ -164,7 +157,7 @@ def process(image):
         # cv2.imshow('ma', car_masked_image)
         car_roi_gray = cv2.cvtColor(car_masked_image, cv2.COLOR_RGB2GRAY)
         # car_roi_color = car_masked_image
-        cv2.imshow('gra', car_roi_gray)
+        # cv2.imshow('gra', car_roi_gray)
         cars = car_cascade.detectMultiScale(car_roi_gray, 1.4, 1, minSize=(80,80))
 
         for (x, y, w, h) in cars:
