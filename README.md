@@ -6,4 +6,6 @@ using opencv-haar-classifier
 
 - line and vehicle detecting
 - warning if lane depature
-Full video[https://www.youtube.com/watch?v=AoC3pPodExk](https://www.youtube.com/watch?v=AoC3pPodExk)
+Full video
+
+[https://www.youtube.com/watch?v=AoC3pPodExk](https://www.youtube.com/watch?v=AoC3pPodExk)
